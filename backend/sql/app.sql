@@ -12,5 +12,5 @@ create table assistance.request (
   id               serial primary key,
   start            text not null,
   stop             text not null,
-  passenger_id     integer references assistance.passenger(id)
+  passenger_id     integer not null references assistance.passenger(id)
 );
