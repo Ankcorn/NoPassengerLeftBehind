@@ -5,7 +5,8 @@ create table assistance.passenger (
   first_name        text not null check (char_length(first_name) < 80),
   pic              text,
   assistance       text not null,
-  created_at       timestamp default now()
+  created_at       timestamp default now(),
+  bio              text,
 );
 
 create table assistance.request (
