@@ -10,6 +10,7 @@ import router from './router'
 import store from './store'
 import Toasted from 'vue-toasted';
 
+
 Vue.use(VueApollo);
 Vue.use(Toasted, {position: 'bottom-right', duration : 5000});
 // HTTP connection to the API
