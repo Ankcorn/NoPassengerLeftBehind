@@ -14,28 +14,25 @@ Vue.use(VueApollo);
 Vue.use(Toasted, {position: 'bottom-right', duration : 5000});
 // HTTP connection to the API
 const httpLink = createHttpLink({
-  // You should use an absolute URL here
-  uri: process.env.LOCAL ? "http://localhost:5000" : "https://no-passenger-left-behind.herokuapp.com/graphql"
+    // You should use an absolute URL here
+    uri: process.env.LOCAL ? "http://localhost:5000" : "https://no-passenger-left-behind.herokuapp.com/graphql"
 });
 
 // Cache implementation
 const cache = new InMemoryCache();
 
-// Create the apollo client
+// Create the apollo passanger_app
 const apolloClient = new ApolloClient({
-  link: httpLink,
-  cache
+    link: httpLink,
+    cache
 });
 
 const apolloProvider = new VueApollo({
-  defaultClient: apolloClient
+    defaultClient: apolloClient
 });
-
-
 new Vue({
-  el: '#app',
-  apolloProvider,
-  router,
-  store,
-  render: h => h(App)
-});
+    apolloProvider,
+    router,
+    store,
+    render: h => h(App)
+}).$mount('#app');

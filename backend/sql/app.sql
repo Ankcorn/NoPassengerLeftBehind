@@ -6,12 +6,13 @@ create table assistance.passenger (
   pic              text,
   assistance       text not null,
   created_at       timestamp default now(),
-  bio              text,
+  bio              text
 );
 
 create table assistance.request (
   id               serial primary key,
   start            text not null,
   stop             text not null,
+  targetTime       timestamp,
   passenger_id     integer not null references assistance.passenger(id)
 );
