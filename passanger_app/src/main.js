@@ -1,11 +1,17 @@
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap-vue/dist/bootstrap-vue.css'
 import Vue from 'vue'
 import { ApolloClient } from "apollo-client";
 import { createHttpLink } from "apollo-link-http";
 import { InMemoryCache } from "apollo-cache-inmemory";
 import VueApollo from "vue-apollo";
-import App from './App.vue'
-Vue.use(VueApollo);
+import App from './App.vue';
+import router from './router'
+import store from './store'
+import Toasted from 'vue-toasted';
 
+Vue.use(VueApollo);
+Vue.use(Toasted, {position: 'bottom-right', duration : 5000});
 // HTTP connection to the API
 const httpLink = createHttpLink({
   // You should use an absolute URL here
@@ -29,5 +35,7 @@ const apolloProvider = new VueApollo({
 new Vue({
   el: '#app',
   apolloProvider,
+  router,
+  store,
   render: h => h(App)
-})
+});
