@@ -4,7 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "node src/index.js"
+    "start": "node src/index.js",
+    "start:local": "DATABASE_URL=postgresql://localhost:5432/local node src/index.js"
   },
   "dependencies": {
     "cors": "^2.8.5",

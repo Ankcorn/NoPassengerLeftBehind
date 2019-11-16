@@ -1,19 +1,26 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
+import gql from 'graphql-tag';
+import { useQuery } from '@apollo/react-hooks';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="content-center">
-        <header className="min-h-screen flex flex-col items-center justify-center text-2xl">
-          <img src={logo} className="h-48 pointer-events-none" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-        </header>
-      </div>
-    );
+const passengers = gql`
+query {
+  passengerById(id: 1) {
+    firstName
   }
+}
+`
+function App() {
+  const { data, loading } = useQuery(passengers)
+
+  if (loading) {
+    return <p>...loading</p>
+  }
+  return (
+    <div className="content-center">
+      {JSON.stringify(data.passengerById)}
+    </div>
+  );
 }
 
 export default App;
