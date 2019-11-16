@@ -28,10 +28,10 @@ function App() {
         <div className="m-12 mx-24 flex-1 overflow-y-auto">
           <article className="bg-white block w-auto px-4 py-2 rounded-lg shadow flex w-full">
             <img src="https://images.unsplash.com/photo-1501527022782-000a8cd28122?ixlib=rb-1.2.1&amp;ixid=xSOfm3S2QQg&amp;auto=format&amp;fit=facearea&amp;facepad=4&amp;w=256&amp;h=256&amp;q=80" alt="" className="h-24 w-24 rounded-full object-cover border-white border-width-2 self-center" />
-            <div className="container mx-auto mx-4 self-center">
-              <p className="p-1 text-lg mx-1 my-2">John Doe</p>
-              <p className="p-1 mx-1 my-2">Wheel Chair User</p>
-              <a className="p-1 text-blue-600 mx-1 my-2" href="tel:07492094264">07492094264 <PhonelinkRingIcon /></a>
+            <div className="container mx-auto px-6 self-center">
+              <p className="p-1 text-lg">John Doe</p>
+              <p className="p-1">Needs Ramp to get on Train</p>
+              <a className="p-1 text-blue-600" href="tel:07492094264">07492094264 <PhonelinkRingIcon /></a>
             </div>
             <div className="container mx-auto flex-1 w-auto flex-no-wrap flex flex-col">
               <div className="flex items-baseline">
