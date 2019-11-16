@@ -61,7 +61,7 @@ function Request({ name, comment, phone, start, stop, pic, helping, toc, delayed
         </div>
       </div>
       <div className="container mx-auto r-0 self-center flex flex-row-reverse">
-        <button className="rounded bg-gray-800 text-white p-2 max-h-16">Help at {getHelpAtState(helping, [start, toc, stop])}</button>
+        {(start === 'Liverpool ST' || stop === 'Liverpool ST') && <button className="rounded bg-gray-800 text-white p-2 max-h-16">Help Now</button>}
       </div>
     </article >
   )

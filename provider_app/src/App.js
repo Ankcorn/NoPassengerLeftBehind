@@ -44,10 +44,10 @@ function App() {
           />
           <Request
             name="Jayne Fonda"
-            comment="Need some weed"
+            comment="Need help to not get lost"
             phone="07012091114"
             start="Amsterdam"
-            stop="Liverpool ST"
+            stop="St Pancras"
             pic="https://images.unsplash.com/photo-1536122522160-72ca6bd783ba?ixlib=rb-1.2.1&amp;ixid=xSOfm3S2QQg&amp;auto=format&amp;fit=facearea&amp;facepad=4&amp;w=256&amp;h=256&amp;q=80"
             helping={[{ staff: 'Wally', done: true }]}
             start_time=""
@@ -57,8 +57,8 @@ function App() {
             name="Oleg Porev"
             comment="Bad English"
             phone="07492133764"
-            start="Glasgow"
-            stop="Liverpool ST"
+            start="Liverpool ST"
+            stop="Edinburgh"
             pic="https://images.unsplash.com/photo-1486648855265-390f3951358d?ixlib=rb-1.2.1&amp;ixid=xSOfm3S2QQg&amp;auto=format&amp;fit=facearea&amp;facepad=4&amp;w=256&amp;h=256&amp;q=80"
             helping={[]}
             toc="Ariva Trains London"
@@ -70,7 +70,7 @@ function App() {
             comment="Need ramp to get on train"
             phone="07492094264"
             start="Birmingham"
-            stop="Liverpool ST"
+            stop="Manchester"
             pic="https://images.unsplash.com/photo-1501527022782-000a8cd28122?ixlib=rb-1.2.1&amp;ixid=xSOfm3S2QQg&amp;auto=format&amp;fit=facearea&amp;facepad=4&amp;w=256&amp;h=256&amp;q=80"
             helping={[{ staff: 'Alex', done: true }, { staff: 'Jane', done: false }]}
             toc="Ariva Trains London"
@@ -78,13 +78,13 @@ function App() {
             delayed="stop"
           />
           <Request
-            name="Jayne Fonda"
-            comment="Need some weed"
+            name="William Boss"
+            comment="Need help pls"
             phone="07012091114"
-            start="Amsterdam"
-            stop="Liverpool ST"
+            start="Paris"
+            stop="St Pancras"
             pic="https://images.unsplash.com/photo-1536122522160-72ca6bd783ba?ixlib=rb-1.2.1&amp;ixid=xSOfm3S2QQg&amp;auto=format&amp;fit=facearea&amp;facepad=4&amp;w=256&amp;h=256&amp;q=80"
-            helping={[{ staff: 'Wally', done: true }]}
+            helping={[{ staff: 'Waldo', done: false }]}
             start_time=""
             toc="Eurostar"
           />
