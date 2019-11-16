@@ -15,7 +15,7 @@ function Header() {
         <nav className="flex">
           <div className="flex items-center">
             <div className="inline-block relative w-64">
-              <select className="block appearance-none w-full text-gray-900 bg-red-300 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
+              <select className="block appearance-none w-full shadow text-gray-900 bg-red-300 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
                 <option>Liverpool St Station</option>
                 <option>Greater Anglia</option>
                 <option>MTR Elizabeth Line</option>
