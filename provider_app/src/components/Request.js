@@ -63,30 +63,6 @@ function Request({ name, comment, phone, start, stop, pic, helping, toc, delayed
       <div className="container mx-auto r-0 self-center flex flex-row-reverse">
         <button className="rounded bg-gray-800 text-white p-2 max-h-16">Help at {getHelpAtState(helping, [start, toc, stop])}</button>
       </div>
-      <button onClick={() => setClick(true)} className="self-end md:hidden"><KeyboardArrowDownIcon /></button>
-      {click && <div className="fixed l-0 t-0 w-auto flex-no-wrap flex flex-col bg-white" onClick={() => setClick(false)}>
-        <div className="mx-4 p-6 flex justify-center inline-block w-auto items-center">
-          <div className="text-gray-900 mx-2 my-2 font-bold"><div>{start}</div> <div> {start_time} </div>{delayed === "start" && <div className="flex"><WarningIcon className="text-red-600" /> Delayed</div>}</div>
-          <span className={`rounded-full bg-${getStatus(helping, 0).color}-600 shadow p-2 inline-block w-auto mx-2`}>
-            <AccountBalanceIcon />
-          </span>
-          <span className={`rounded-lg bg-${getStatus(helping, 0).color}-600 px-2 py-1 shadow`}>{getStatus(helping, 0).text}</span>
-        </div>
-        <div className="mx-6 p-6 flex justify-center items-center">
-          <p className="text-gray-900 mx-2 my-2 font-bold">{toc}</p>
-          <span className={`rounded-full bg-${getStatus(helping, 1).color}-600 shadow p-2 inline-block w-auto mx-2`}>
-            <TrainIcon />
-          </span>
-          <span className={`rounded-lg bg-${getStatus(helping, 1).color}-600 px-2 py-1 shadow`}>{getStatus(helping, 1).text}</span>
-        </div>
-        <div className="mx-4 p-6 flex justify-center items-center">
-          <div className="text-gray-900 mx-1 my-1 block font-bold"> <div>{stop}</div> <div> {end_time} </div>{delayed === "stop" && <div className="flex"><WarningIcon className="text-red-600" /> Delayed</div>}</div>
-          <span className={`rounded-full bg-${getStatus(helping, 2).color}-600 shadow p-2 inline-block w-auto mx-2`}>
-            <AccountBalanceIcon />
-          </span>
-          <span className={`rounded-lg bg-${getStatus(helping, 2).color}-600 px-2 py-1 shadow`}>{getStatus(helping, 2).text}</span>
-        </div>
-      </div>}
     </article >
   )
 }
