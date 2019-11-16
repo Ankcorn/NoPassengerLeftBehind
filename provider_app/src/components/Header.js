@@ -4,7 +4,7 @@ import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 function Header() {
   return (
     <header className="flex flex-shrink-0">
-      <div className="flex-shrink-0 px-2 py-2 bg-red-900 h-12 w-56">
+      <div className="flex-shrink-0 px-2 py-2 bg-red-900 h-12 sm: w-16 md:w-56">
         <button className="block text-gray-300 inline-flex justify-around align-middle hover:text-red-100">
           <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=4&amp;w=144&amp;h=144&amp;q=80" alt="" className="h-8 w-8 rounded-full object-cover border-white border-width-2" />
           <span className="px-3 py-1 sm:hidden md:block">Brenda Smith</span>
