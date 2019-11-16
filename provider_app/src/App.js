@@ -2,11 +2,15 @@ import React, { Component } from 'react';
 import gql from 'graphql-tag';
 import { useQuery } from '@apollo/react-hooks';
 import Header from './components/Header';
-import AccessibilityNewIcon from '@material-ui/icons/AccessibilityNew';
+import TrainIcon from '@material-ui/icons/Train';
+import WarningIcon from '@material-ui/icons/Warning';
+import TimelineIcon from '@material-ui/icons/Timeline';
+import AccountBalanceIcon from '@material-ui/icons/AccountBalance';
 import PhonelinkRingIcon from '@material-ui/icons/PhonelinkRing';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
+import Request from './components/Request';
 import Pannel from './components/Pannel'
-
+import './extra.css'
 const passengers = gql`
 query {
   passengerById(id: 1) {
@@ -15,45 +19,87 @@ query {
 }
 `
 function App() {
-  const { data, loading } = useQuery(passengers)
+  // const { data, loading } = useQuery(passengers)
 
-  if (loading) {
-    return <p>...loading</p>
-  }
+  // if (loading) {
+  //   return <p>...loading</p>
+  // }
   return (
     <div className="h-screen w-screen flex flex-col bg-red-100">
       <Header />
-      <div className="flex-1 flex overflow-hidden">
+      <div className="flex-1 flex overflow-hidden crazy">
         <Pannel />
-        <div className="m-12 mx-24 flex-1 overflow-y-auto">
-          <article className="bg-white block w-auto px-4 py-2 rounded-lg shadow flex w-full">
-            <img src="https://images.unsplash.com/photo-1501527022782-000a8cd28122?ixlib=rb-1.2.1&amp;ixid=xSOfm3S2QQg&amp;auto=format&amp;fit=facearea&amp;facepad=4&amp;w=256&amp;h=256&amp;q=80" alt="" className="h-24 w-24 rounded-full object-cover border-white border-width-2 self-center" />
-            <div className="container mx-auto px-6 self-center">
-              <p className="p-1 text-lg">John Doe</p>
-              <p className="p-1">Needs Ramp to get on Train</p>
-              <a className="p-1 text-blue-600" href="tel:07492094264">07492094264 <PhonelinkRingIcon /></a>
-            </div>
-            <div className="container mx-auto flex-1 w-auto flex-no-wrap flex flex-col">
-              <div className="flex items-baseline">
-                <label className="text-xs text-gray-700 mx-1">Start:</label>
-                <p className="text-gray-900 mx-1 my-2">Basingstoke</p>
-              </div>
-              <div className="flex items-baseline">
-                <label className="text-xs text-gray-700 mx-1">Destination:</label>
-                <p className="text-gray-900 mx-1 my-2">Manchester</p>
-              </div>
-              <div className="flex items-baseline">
-                <label className="text-xs text-gray-700 mx-1">Provider:</label>
-                <p className="text-gray-900 mx-1 my-2">Ariva Trains London</p>
-              </div>
-            </div>
-            <div className="container mx-auto"><span className="">Close To Destination</span></div>
-            <button className="self-end"><KeyboardArrowDownIcon /></button>
-
-          </article>
-          <div>
-
-          </div>
+        <div className="mx-6 flex-1 overflow-y-auto">
+          <Request
+            name="John Doe"
+            comment="Need ramp to get on train"
+            phone="07492094264"
+            start="Birmingham"
+            stop="Liverpool ST"
+            pic="https://images.unsplash.com/photo-1501527022782-000a8cd28122?ixlib=rb-1.2.1&amp;ixid=xSOfm3S2QQg&amp;auto=format&amp;fit=facearea&amp;facepad=4&amp;w=256&amp;h=256&amp;q=80"
+            helping={[{ staff: 'Alex', done: true }, { staff: 'Jane', done: false }]}
+            toc="Ariva Trains London"
+            end_time="12:45pm"
+            delayed="stop"
+          />
+          <Request
+            name="Jayne Fonda"
+            comment="Need help to not get lost"
+            phone="07012091114"
+            start="Amsterdam"
+            stop="St Pancras"
+            pic="https://images.unsplash.com/photo-1536122522160-72ca6bd783ba?ixlib=rb-1.2.1&amp;ixid=xSOfm3S2QQg&amp;auto=format&amp;fit=facearea&amp;facepad=4&amp;w=256&amp;h=256&amp;q=80"
+            helping={[{ staff: 'Wally', done: true }]}
+            start_time=""
+            toc="Eurostar"
+          />
+          <Request
+            name="Oleg Porev"
+            comment="Bad English"
+            phone="07492133764"
+            start="Liverpool ST"
+            stop="Edinburgh"
+            pic="https://images.unsplash.com/photo-1486648855265-390f3951358d?ixlib=rb-1.2.1&amp;ixid=xSOfm3S2QQg&amp;auto=format&amp;fit=facearea&amp;facepad=4&amp;w=256&amp;h=256&amp;q=80"
+            helping={[]}
+            toc="Ariva Trains London"
+            start_time="1:00pm"
+            end_time="6:45pm"
+          />
+          <Request
+            name="John John"
+            comment="Need ramp to get on train"
+            phone="07492094264"
+            start="Birmingham"
+            stop="Manchester"
+            pic="https://images.unsplash.com/photo-1501527022782-000a8cd28122?ixlib=rb-1.2.1&amp;ixid=xSOfm3S2QQg&amp;auto=format&amp;fit=facearea&amp;facepad=4&amp;w=256&amp;h=256&amp;q=80"
+            helping={[{ staff: 'Alex', done: true }, { staff: 'Jane', done: false }]}
+            toc="Ariva Trains London"
+            end_time="12:45pm"
+            delayed="stop"
+          />
+          <Request
+            name="William Boss"
+            comment="Need help pls"
+            phone="07012091114"
+            start="Paris"
+            stop="St Pancras"
+            pic="https://images.unsplash.com/photo-1536122522160-72ca6bd783ba?ixlib=rb-1.2.1&amp;ixid=xSOfm3S2QQg&amp;auto=format&amp;fit=facearea&amp;facepad=4&amp;w=256&amp;h=256&amp;q=80"
+            helping={[{ staff: 'Waldo', done: false }]}
+            start_time=""
+            toc="Eurostar"
+          />
+          <Request
+            name="Oleg Porev"
+            comment="No English"
+            phone="07492133764"
+            start="Glasgow"
+            stop="Liverpool ST"
+            pic="https://images.unsplash.com/photo-1486648855265-390f3951358d?ixlib=rb-1.2.1&amp;ixid=xSOfm3S2QQg&amp;auto=format&amp;fit=facearea&amp;facepad=4&amp;w=256&amp;h=256&amp;q=80"
+            helping={[{ staff: 'Wally' }]}
+            toc="Ariva Trains London"
+            start_time="1:00pm"
+            end_time="6:45pm"
+          />
         </div>
       </div>
     </div>

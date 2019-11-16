@@ -4,9 +4,9 @@ import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 function Header() {
   return (
     <header className="flex flex-shrink-0">
-      <div className="flex-shrink-0 px-4 py-4 bg-red-900 h-16 w-64">
-        <button className="block text-gray-300 inline-flex justify-around align-middle hover:text-red-100">
-          <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=4&amp;w=144&amp;h=144&amp;q=80" alt="" className="h-8 w-8 rounded-full object-cover border-white border-width-2" />
+      <div className="flex-shrink-0 px-2 py-2 bg-red-900 h-12 sm:w-24 md:w-56">
+        <button className="block text-gray-300 flex justify-around align-middle hover:text-red-100">
+          <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=4&amp;w=144&amp;h=144&amp;q=80" alt="" className="h-8 w-8 rounded-full object-cover border-white border-width-2 mx-4" />
           <span className="px-3 py-1 sm:hidden md:block">Brenda Smith</span>
           <KeyboardArrowDownIcon className="my-1" />
         </button>
@@ -15,7 +15,7 @@ function Header() {
         <nav className="flex">
           <div className="flex items-center">
             <div className="inline-block relative w-64">
-              <select className="block appearance-none w-full text-gray-900 bg-red-300 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
+              <select className="block appearance-none w-full shadow text-gray-900 bg-red-300 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
                 <option>Liverpool St Station</option>
                 <option>Greater Anglia</option>
                 <option>MTR Elizabeth Line</option>
