@@ -29,7 +29,7 @@ function App() {
       <Header />
       <div className="flex-1 flex overflow-hidden">
         <Pannel />
-        <div className="m-12 mx-24 flex-1 overflow-y-auto">
+        <div className="mx-6 flex-1 overflow-y-auto">
           <Request
             name="John Doe"
             comment="Need ramp to get on train"
