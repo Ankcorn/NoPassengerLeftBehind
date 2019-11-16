@@ -9,7 +9,7 @@ Vue.use(VueApollo);
 // HTTP connection to the API
 const httpLink = createHttpLink({
   // You should use an absolute URL here
-  uri: "https://no-passenger-left-behind.herokuapp.com/graphql"
+  uri: process.env.LOCAL ? "http://localhost:5000" : "https://no-passenger-left-behind.herokuapp.com/graphql"
 });
 
 // Cache implementation
