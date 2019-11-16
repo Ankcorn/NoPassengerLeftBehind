@@ -15,7 +15,7 @@ Vue.use(Toasted, {position: 'bottom-right', duration : 5000});
 // HTTP connection to the API
 const httpLink = createHttpLink({
   // You should use an absolute URL here
-  uri: "https://no-passenger-left-behind.herokuapp.com/graphql"
+  uri: process.env.LOCAL ? "http://localhost:5000" : "https://no-passenger-left-behind.herokuapp.com/graphql"
 });
 
 // Cache implementation
