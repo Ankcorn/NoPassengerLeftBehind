@@ -3,6 +3,7 @@ import AccessibilityNewIcon from '@material-ui/icons/AccessibilityNew';
 import SupervisorAccountIcon from '@material-ui/icons/SupervisorAccount';
 import AirportShuttleIcon from '@material-ui/icons/AirportShuttle';
 import SettingsApplicationsIcon from '@material-ui/icons/SettingsApplications';
+
 function Pannel() {
   return (
     <div className="z-30 inset-y-0 left-0 w-46 sm:hidden md:block bg-gray-900 border-r overflow-y-auto sm:translate-x-0 sm:transition-none -translate-x-full ease-in transition-medium">

@@ -19,11 +19,11 @@ query {
 }
 `
 function App() {
-  const { data, loading } = useQuery(passengers)
+  // const { data, loading } = useQuery(passengers)
 
-  if (loading) {
-    return <p>...loading</p>
-  }
+  // if (loading) {
+  //   return <p>...loading</p>
+  // }
   return (
     <div className="h-screen w-screen flex flex-col bg-red-100">
       <Header />
