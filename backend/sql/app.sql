@@ -2,28 +2,37 @@ create schema assistance;
 
 create table assistance.passenger (
   id               serial primary key,
-  first_name        text not null check (char_length(first_name) < 80),
+  name        text not null check (char_length(name) < 80),
   pic              text,
-  assistance       text not null,
+  assistance       text,
   created_at       timestamp default now(),
   email            text,
-  phone            text,
+  phone            integer,
   bio              text
 );
 
 create table assistance.request (
   id               serial primary key,
-  start            text not null,
-  stop             text not null,
-  start_time       timestamp not null,
-  current_position text,
+  start            text,
+  stop             text,
+  start_time       timestamp,
+  current_position integer[],
+  comment          text ,
+  status            text,
   passenger_id     integer not null references assistance.passenger(id)
 );
 
 create table assistance.staff (
   id               serial primary key,
   name             text not null,
-  pic              text not null
+  pic              text not null,
+  phone            text
+);
+
+create table assistance.staff_passengers (
+  staff_id     INT REFERENCES assistance.staff (id) ON DELETE CASCADE,
+  passenger_id  INT REFERENCES assistance.passenger (id) ON DELETE CASCADE,
+  stage text
 );
 
 CREATE FUNCTION trigger_job1() RETURNS trigger AS $$

@@ -83,7 +83,7 @@
                     user: {
                         name: '',
                         email: '',
-                        phone: '',
+                        phone: null,
                         photo: '',
                     },
                     time: '',
