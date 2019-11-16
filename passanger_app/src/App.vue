@@ -1,5 +1,5 @@
 <template>
-  <div>{{ hello }}</div>
+  <h1>Hello {{ passengerById.firstName }}</h1>
 </template>
 
 <script>
@@ -7,11 +7,10 @@ import gql from "graphql-tag";
 export default {
   name: "app",
   apollo: {
-    passanger: gql`
+    passengerById: gql`
       query {
         passengerById(id: 1) {
           firstName
-          assistance
         }
       }
     `
