@@ -12,6 +12,8 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "nodemailer": "^6.3.1",
+    "graphile-worker": "^0.1.0",
+    "pg": "^7.12.1",
     "postgraphile": "^4.4.4"
   }
 }
