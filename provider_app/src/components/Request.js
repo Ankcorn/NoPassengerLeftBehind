@@ -31,12 +31,12 @@ function Request({ name, comment, phone, start, stop, pic, helping, toc, delayed
   return (
     <article className="bg-white px-3 py-1 rounded-lg shadow flex w-full my-6 justify-between">
       <img src={pic} alt="" className="h-14 w-16 rounded-full object-cover border-white border-width-2 self-center" />
-      <div className="px-4 self-center">
+      <div className="px-4 container mx-auto self-center">
         <p className="p-1 text-lg font-bold">{name}</p>
         <p className="p-1">{comment}</p>
         <a className="p-1 text-blue-600" href="tel:07492094264">{phone} <PhonelinkRingIcon /></a>
       </div>
-      <div className="flex-1 w-auto flex-no-wrap flex flex-grow">
+      <div className="flex-1 container mx-auto  w-auto flex-no-wrap flex flex-grow">
         <div className="mx-4 flex justify-center inline-block w-auto items-center">
           <div className="text-gray-900 mx-2 my-2 font-bold"><div>{start}</div> <div> {start_time} </div>{delayed === "start" && <div className="flex"><WarningIcon className="text-red-600" /> Delayed</div>}</div>
           <span className={`rounded-full bg-${getStatus(helping, 0).color}-600 shadow p-2 inline-block w-auto mx-2`}>
@@ -59,9 +59,10 @@ function Request({ name, comment, phone, start, stop, pic, helping, toc, delayed
           <span className={`rounded-lg bg-${getStatus(helping, 2).color}-600 px-2 py-1 shadow`}>{getStatus(helping, 2).text}</span>
         </div>
       </div>
-      <button className="rounded-sm self-center bg-gray-800 text-white p-2 max-h-16">Help at {getHelpAtState(helping, [start, toc, stop])}</button>
+      <div className="container mx-auto r-0 self-center flex flex-row-reverse">
+        <button className="rounded bg-gray-800 text-white p-2 max-h-16">Help at {getHelpAtState(helping, [start, toc, stop])}</button>
+      </div>
       <button className="self-end hidden"><KeyboardArrowDownIcon /></button>
-
     </article >
   )
 }
