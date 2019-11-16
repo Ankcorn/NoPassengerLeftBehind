@@ -10,7 +10,7 @@ import PhonelinkRingIcon from '@material-ui/icons/PhonelinkRing';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import Request from './components/Request';
 import Pannel from './components/Pannel'
-
+import './extra.css'
 const passengers = gql`
 query {
   passengerById(id: 1) {
@@ -27,7 +27,7 @@ function App() {
   return (
     <div className="h-screen w-screen flex flex-col bg-red-100">
       <Header />
-      <div className="flex-1 flex overflow-hidden">
+      <div className="flex-1 flex overflow-hidden crazy">
         <Pannel />
         <div className="mx-6 flex-1 overflow-y-auto">
           <Request

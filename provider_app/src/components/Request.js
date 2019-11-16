@@ -11,7 +11,7 @@ function getStatus(helping, index) {
       return { text: 'Upcoming', color: 'blue' }
     }
     if (helping[index].done) {
-      return { text: 'Recieved', color: 'green' }
+      return { text: 'Received', color: 'green' }
     }
     return { text: `${helping[index].staff} Helping`, color: 'orange' }
   } catch (e) {
