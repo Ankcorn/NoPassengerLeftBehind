@@ -6,7 +6,7 @@
         <main id="page-container">
             <div class="row pt-3">
                 <div class="col-1"></div>
-                <div class="col-10 inside_main">
+                <div class="col-10">
                     <router-view/>
                 </div>
                 <div class="col-1"></div>

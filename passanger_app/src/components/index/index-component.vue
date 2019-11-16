@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="container inside_main">
         <div class="row text-center">
             <div class="col">
                 Do you need help?
