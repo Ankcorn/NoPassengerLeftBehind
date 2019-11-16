@@ -4,8 +4,8 @@ const cors = require('cors');
 require('dotenv').config();
 require('./jobs.js')
 const app = express();
-app.use(cors())
-console.log(process.env.DATABASE_URL)
+app.use(cors());
+console.log(process.env.DATABASE_URL);
 app.use(
   postgraphile(
     process.env.DATABASE_URL,

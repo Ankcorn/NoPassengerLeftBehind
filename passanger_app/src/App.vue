@@ -1,54 +1,60 @@
 <template>
-  <h1>Hello {{ passengerById.firstName }}</h1>
+    <div id="app">
+        <header>
+            <header-component></header-component>
+        </header>
+        <main id="page-container">
+            <div class="row pt-3">
+                <div class="col-1"></div>
+                <div class="col-10 inside_main">
+                    <router-view/>
+                </div>
+                <div class="col-1"></div>
+            </div>
+        </main>
+        <!--<footer id="footer">-->
+            <!--<footer-component></footer-component>-->
+        <!--</footer>-->
+
+    </div>
+
 </template>
 
 <script>
-import gql from "graphql-tag";
-export default {
-  name: "app",
-  apollo: {
-    passengerById: gql`
-      query {
-        passengerById(id: 1) {
-          firstName
-        }
-      }
-    `
-  },
-  data() {
-    return {
-      msg: "Welcome to Your Vue.js App"
+    import HeaderComponent from './components/header_footer/header-component.vue';
+
+    import {mapGetters, mapState} from 'vuex';
+
+    export default {
+        name: 'App',
+        components: {
+            HeaderComponent,
+        },
+        data() {
+            return {
+                checkLogged: false,
+            };
+        },
+
     };
-  }
-};
 </script>
 
 <style>
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+    main {
+        background-color: rgb(34, 164, 243);
+        /*background: linear-gradient(45deg, dodgerblue, white);*/
+    }
 
-h1,
-h2 {
-  font-weight: normal;
-}
+    #page-container {
+        position: relative;
+        min-height: 100vh;
+        padding-bottom: 1em;
+    }
+    .inside_main {
+        border-radius: 20px;
+        padding: 1em;
+        background-color: white;
+    }
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
-}
 </style>
+
