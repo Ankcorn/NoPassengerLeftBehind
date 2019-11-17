@@ -30,11 +30,18 @@ create table assistance.staff (
 );
 
 create table assistance.staff_passengers (
-  staff_id     INT REFERENCES assistance.staff (id) ON DELETE CASCADE,
+  id            serial primary key,
+  staff_id      INT REFERENCES assistance.staff (id) ON DELETE CASCADE,
   passenger_id  INT REFERENCES assistance.passenger (id) ON DELETE CASCADE,
   stage text not null,
   done  boolean not null
 );
+
+create table assistance.review (
+  id          serial primary key,
+  number      int not null check (number < 6),
+  assistance_id int references assistance.staff_passengers(id),
+)
 
 CREATE FUNCTION trigger_job1() RETURNS trigger AS $$
 BEGIN
@@ -49,7 +56,7 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql VOLATILE;
 
-CREATE TRIGGER send_verification_email1
+CREATE TRIGGER create_request_email
   AFTER INSERT ON assistance.request
   FOR EACH ROW
-  EXECUTE PROCEDURE trigger_job1('send_verification_email');
+  EXECUTE PROCEDURE trigger_job('send_email');

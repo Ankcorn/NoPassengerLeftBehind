@@ -14,7 +14,7 @@ async function main() {
     pollInterval: 2000,
 
     taskList: {
-      send_verification_email: async (payload, helpers) => {
+      send_email: async (payload, helpers) => {
         console.log(`Received ${JSON.stringify(payload)}`);
       },
     },
