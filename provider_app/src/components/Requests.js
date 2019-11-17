@@ -43,7 +43,7 @@ function Table() {
   console.log(data.allRequests)
   return (
     <div className="mx-6 flex-1 overflow-y-auto">
-      {data.allRequests.edges.map(r => <Request
+      {data.allRequests.edges.reverse().map((r, i) => <Request
         id={r.node.id}
         name={r.node.passengerByPassengerId.name}
         comment={r.node.comment}
@@ -53,7 +53,7 @@ function Table() {
         pic={r.node.passengerByPassengerId.pic}
         helping={r.node.actionsByRequestId.edges.length > 0 ? r.node.actionsByRequestId.edges.map(el => ({ staff: el.node.staffByStaffId.name, done: el.node.done, stage: el.node.stage })).sort((a, b) => parseInt(a.stage) - parseInt(b.stage)) : []}
         // helping={r.node.actionsByRequestId.edges.map(el => ({ staff: el.staffByStaffId.name, done: el.done, stage: el.stage })).sort((a, b) => parseInt(a.stage) - parseInt(b.stage))}
-
+        delayed={i === 2 && "start"}
         toc={r.node.toc}
         end_time={new Date(r.node.startTime).toTimeString().split(' ')[0]}
       // delayed="stop"

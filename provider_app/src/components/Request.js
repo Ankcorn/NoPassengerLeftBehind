@@ -40,20 +40,13 @@ function getStatus(helping, index) {
   }
 }
 
-function getHelpAtState(a, opts) {
-  try {
-    return opts[a.length]
-  } catch (e) {
-    return opts[0]
-  }
-
-}
 function Request({ name, comment, phone, start, stop, pic, helping, toc, delayed, end_time, start_time, id }) {
   const [addAction] = useMutation(ADD_ACTION);
   const [updateAction] = useMutation(Update_ACTION)
   const [button, setButton] = useState('Provide Assistance');
   const [actionId, setActionId] = useState()
   const [no, setNo] = useState(false)
+
   async function handleClick() {
     if (button === 'Complete') {
       updateAction({ variables: { id: actionId } })
@@ -64,7 +57,6 @@ function Request({ name, comment, phone, start, stop, pic, helping, toc, delayed
     console.log({ variables: { done: false, stage: "1", requestId: id } })
     const data = await addAction({ variables: { done: false, stage: "1", requestId: id } });
     setButton('Complete')
-    console.log(data)
     setActionId(data.data.createAction.action.id)
   }
   return (
