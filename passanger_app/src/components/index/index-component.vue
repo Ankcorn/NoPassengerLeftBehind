@@ -186,6 +186,7 @@ export default {
                 $start: String!
                 $stop: String!
                 $toc: String!
+                $comment: String!
               ) {
                 createRequest(
                   input: {
@@ -194,6 +195,7 @@ export default {
                       start: $start
                       stop: $stop
                       toc: $toc
+                      comment: $comment
                     }
                   }
                 ) {
@@ -208,7 +210,8 @@ export default {
               id: e.data.createPassenger.passenger.id,
               start: this.request.start,
               stop: this.request.destination,
-              toc: "GREAT WESTERN"
+              toc: "GREAT WESTERN",
+              comment: this.request.help
             }
           });
         })
