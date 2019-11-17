@@ -20,7 +20,7 @@ const httpLink = new HttpLink({
 
 // Create a WebSocket link:
 const wsLink = new WebSocketLink({
-  uri: "ws://no-passenger-left-behind.herokuapp.com/graphql",
+  uri: "wss://no-passenger-left-behind.herokuapp.com/graphql",
   options: {
     reconnect: true
   }
