@@ -37,7 +37,7 @@ subscription {
   }
 }
 `;
-function Table() {
+function Table({ setMapOpen }) {
   const { data, loading } = useSubscription(all);
   if (loading) return null;
   console.log(data.allRequests)
@@ -56,7 +56,8 @@ function Table() {
         delayed={i === 2 && "start"}
         toc={r.node.toc}
         end_time={new Date(r.node.startTime).toTimeString().split(' ')[0]}
-      // delayed="stop"
+        // delayed="stop"
+        setMapOpen={setMapOpen}
       />)}
     </div>
   )

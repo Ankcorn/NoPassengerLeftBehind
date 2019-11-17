@@ -40,7 +40,7 @@ function getStatus(helping, index) {
   }
 }
 
-function Request({ name, comment, phone, start, stop, pic, helping, toc, delayed, end_time, start_time, id }) {
+function Request({ name, comment, phone, start, stop, pic, helping, toc, delayed, end_time, start_time, id, setMapOpen }) {
   const [addAction] = useMutation(ADD_ACTION);
   const [updateAction] = useMutation(Update_ACTION)
   const [button, setButton] = useState('Provide Assistance');
@@ -70,7 +70,7 @@ function Request({ name, comment, phone, start, stop, pic, helping, toc, delayed
       <div className="flex-1 sm:hidden md:block container mx-auto  w-auto flex-no-wrap flex flex-grow">
         <div className="mx-4 flex justify-center inline-block w-auto items-center">
           <div className="text-gray-900 mx-2 my-2 font-bold"><div>{start}</div> <div> {start_time} </div>{delayed === "start" && <div className="flex"><WarningIcon className="text-red-600" /> Delayed</div>}</div>
-          <span className={`rounded-full bg-${getStatus(helping, 0).color}-600 shadow p-2 inline-block w-auto mx-2`}>
+          <span onClick={() => setMapOpen(true)} className={`rounded-full bg-${getStatus(helping, 0).color}-600 shadow p-2 inline-block w-auto mx-2`}>
             <AccountBalanceIcon />
           </span>
           <span className={`rounded-lg bg-${getStatus(helping, 0).color}-600 px-2 py-1 shadow`}>{getStatus(helping, 0).text}</span>
