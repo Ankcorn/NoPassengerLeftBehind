@@ -1,10 +1,10 @@
 import React from 'react';
 import Request from './Request';
 import gql from 'graphql-tag';
-import { useQuery } from '@apollo/react-hooks';
+import { useSubscription } from '@apollo/react-hooks';
 
 const all = gql`
-query {
+subscription {
   allRequests {
     edges {
       node {
@@ -38,9 +38,7 @@ query {
 }
 `;
 function Table() {
-  const { data, loading } = useQuery(all, {
-    pollInterval: 200,
-  });
+  const { data, loading } = useSubscription(all);
   if (loading) return null;
   console.log(data.allRequests)
   return (

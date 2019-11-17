@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { ApolloProvider } from '@apollo/react-hooks';
+import { SubscriptionClient } from "subscriptions-transport-ws";
 import { ApolloClient } from 'apollo-client';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import { HttpLink } from 'apollo-link-http';
@@ -19,12 +20,9 @@ const httpLink = new HttpLink({
 });
 
 // Create a WebSocket link:
-const wsLink = new WebSocketLink({
-  uri: "wss://no-passenger-left-behind.herokuapp.com/graphql",
-  options: {
-    reconnect: true
-  }
-});
+const wsLink = new WebSocketLink(new SubscriptionClient("wss://no-passenger-left-behind.herokuapp.com/graphql", {
+  reconnect: true
+}));
 
 // using the ability to split links, you can send data to each link
 // depending on what kind of operation is being sent
