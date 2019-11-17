@@ -3,13 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="674dfe56-713a-4ead-93ca-061f9bd2a979" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/passanger_app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/passanger_app/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/passanger_app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/passanger_app/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/passanger_app/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/passanger_app/src/App.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/passanger_app/src/components/index/index-component.vue" beforeDir="false" afterPath="$PROJECT_DIR$/passanger_app/src/components/index/index-component.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/passanger_app/src/components/profile/profile-component.vue" beforeDir="false" afterPath="$PROJECT_DIR$/passanger_app/src/components/profile/profile-component.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/passanger_app/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/passanger_app/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/passanger_app/src/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/passanger_app/src/router.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/passanger_app/src/components/index/index-component.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="51" column="5" lean-forward="true" selection-start-line="51" selection-start-column="5" selection-end-line="53" selection-end-column="18" />
+            <state relative-caret-position="245">
+              <caret line="147" column="25" lean-forward="true" selection-start-line="147" selection-start-column="25" selection-end-line="147" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -43,14 +37,18 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/passanger_app/src/components/profile/profile-component.vue">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/passanger_app/src/components/journey/journey-component.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="373">
-              <caret line="38" column="42" selection-start-line="38" selection-start-column="42" selection-end-line="38" selection-end-column="42" />
+            <state relative-caret-position="683">
+              <caret line="88" column="13" lean-forward="true" selection-start-line="88" selection-start-column="13" selection-end-line="88" selection-end-column="13" />
               <folding>
-                <element signature="n#src#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="e#35639#35669#0" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#src#0;n#img#0;n#div#0;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#src#0;n#img#0;n#div#0;n#div#1;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#2;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#src#0;n#img#0;n#div#0;n#div#2;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -101,12 +99,12 @@
         <option value="$PROJECT_DIR$/backend/package.json" />
         <option value="$PROJECT_DIR$/backend/sql/app.sql" />
         <option value="$PROJECT_DIR$/passanger_app/src/App.vue" />
-        <option value="$PROJECT_DIR$/passanger_app/src/components/index/index-component.vue" />
         <option value="$PROJECT_DIR$/passanger_app/src/router.js" />
         <option value="$PROJECT_DIR$/passanger_app/src/main.js" />
         <option value="$PROJECT_DIR$/passanger_app/src/components/feedback/feedback-component.vue" />
         <option value="$PROJECT_DIR$/passanger_app/src/components/journey/journey-component.vue" />
         <option value="$PROJECT_DIR$/passanger_app/src/components/profile/profile-component.vue" />
+        <option value="$PROJECT_DIR$/passanger_app/src/components/index/index-component.vue" />
       </list>
     </option>
   </component>
@@ -120,79 +118,52 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="tran" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tran" type="462c0819:PsiDirectoryNode" />
+              <item name="train" type="b2602c69:ProjectViewProjectNode" />
+              <item name="train" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="tran" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tran" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tran" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tran" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="sql" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tran" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tran" type="462c0819:PsiDirectoryNode" />
+              <item name="train" type="b2602c69:ProjectViewProjectNode" />
+              <item name="train" type="462c0819:PsiDirectoryNode" />
               <item name="passanger_app" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="tran" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tran" type="462c0819:PsiDirectoryNode" />
+              <item name="train" type="b2602c69:ProjectViewProjectNode" />
+              <item name="train" type="462c0819:PsiDirectoryNode" />
               <item name="passanger_app" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="tran" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tran" type="462c0819:PsiDirectoryNode" />
+              <item name="train" type="b2602c69:ProjectViewProjectNode" />
+              <item name="train" type="462c0819:PsiDirectoryNode" />
               <item name="passanger_app" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="tran" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tran" type="462c0819:PsiDirectoryNode" />
-              <item name="passanger_app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="feedback" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tran" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tran" type="462c0819:PsiDirectoryNode" />
+              <item name="train" type="b2602c69:ProjectViewProjectNode" />
+              <item name="train" type="462c0819:PsiDirectoryNode" />
               <item name="passanger_app" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="index" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="tran" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tran" type="462c0819:PsiDirectoryNode" />
+              <item name="train" type="b2602c69:ProjectViewProjectNode" />
+              <item name="train" type="462c0819:PsiDirectoryNode" />
               <item name="passanger_app" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="journey" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="tran" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tran" type="462c0819:PsiDirectoryNode" />
-              <item name="passanger_app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="profile" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -274,23 +245,24 @@
       <workItem from="1573913216359" duration="9208000" />
       <workItem from="1573935321459" duration="1552000" />
       <workItem from="1573937002047" duration="3919000" />
+      <workItem from="1573992452219" duration="64000" />
+      <workItem from="1573992532132" duration="261000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22362000" />
+    <option name="totallyTimeSpent" value="22687000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1987315" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1987315" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32891566" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.23493975" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.23493975" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -298,7 +270,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.36385542" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.5108434" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -460,6 +432,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/passanger_app/src/components/profile/profile-component.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="26" column="57" lean-forward="true" selection-start-line="26" selection-start-column="57" selection-end-line="26" selection-end-column="57" />
+          <folding>
+            <element signature="n#src#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/passanger_app/src/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -472,8 +454,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/passanger_app/src/components/journey/journey-component.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="13" column="83" selection-start-line="13" selection-start-column="83" selection-end-line="13" selection-end-column="83" />
+        <state relative-caret-position="683">
+          <caret line="88" column="13" lean-forward="true" selection-start-line="88" selection-start-column="13" selection-end-line="88" selection-end-column="13" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
             <element signature="n#src#0;n#img#0;n#div#0;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
@@ -487,19 +469,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/passanger_app/src/components/index/index-component.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="51" column="5" lean-forward="true" selection-start-line="51" selection-start-column="5" selection-end-line="53" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/passanger_app/src/components/profile/profile-component.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="38" column="42" selection-start-line="38" selection-start-column="42" selection-end-line="38" selection-end-column="42" />
-          <folding>
-            <element signature="n#src#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="e#35639#35669#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="245">
+          <caret line="147" column="25" lean-forward="true" selection-start-line="147" selection-start-column="25" selection-end-line="147" selection-end-column="25" />
         </state>
       </provider>
     </entry>

@@ -140,7 +140,7 @@ export default {
   },
   methods: {
     submit() {
-      console.log(this.request.user.name);
+      this.$toasted.success("Thank you for booking");
       this.$apollo
         .mutate({
           // Query
@@ -217,7 +217,6 @@ export default {
         })
         .then(e => {
           console.log(e);
-          this.$toasted.success("Thank you for booking");
         });
     },
     async getPhoto() {
