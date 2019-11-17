@@ -13,6 +13,12 @@ app.use(
     {
       graphiql: true,
       enhanceGraphiql: true,
+      live: true,
+      ownerConnectionString: process.env.DATABASE_URL,
+      appendPlugins: [
+        //...
+        require("@graphile/subscriptions-lds").default,
+      ],
     }
   )
 );
