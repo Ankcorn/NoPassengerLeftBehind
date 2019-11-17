@@ -50,6 +50,7 @@ function Table({ setMapOpen }) {
         phone={r.node.passengerByPassengerId.phone}
         start={r.node.start}
         stop={r.node.stop}
+        status={r.node.status}
         pic={r.node.passengerByPassengerId.pic}
         helping={r.node.actionsByRequestId.edges.length > 0 ? r.node.actionsByRequestId.edges.map(el => ({ staff: el.node.staffByStaffId.name, done: el.node.done, stage: el.node.stage })).sort((a, b) => parseInt(a.stage) - parseInt(b.stage)) : []}
         // helping={r.node.actionsByRequestId.edges.map(el => ({ staff: el.staffByStaffId.name, done: el.done, stage: el.stage })).sort((a, b) => parseInt(a.stage) - parseInt(b.stage))}
