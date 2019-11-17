@@ -3,8 +3,29 @@ import TrainIcon from '@material-ui/icons/Train';
 import WarningIcon from '@material-ui/icons/Warning';
 import AccountBalanceIcon from '@material-ui/icons/AccountBalance';
 import PhonelinkRingIcon from '@material-ui/icons/PhonelinkRing';
-import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
-import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
+import { useMutation } from '@apollo/react-hooks';
+import gql from 'graphql-tag';
+
+const ADD_ACTION = gql`
+  mutation AddAction($requestId: Int!, $stage: String!, $done: Boolean ) {
+    createAction(input: {action: {stage: $stage, done: $done, staffId: 1, requestId: $requestId}}) {
+      action {
+        id
+      }
+    }
+  }
+`;
+
+const Update_ACTION = gql`
+  mutation AddAction($id: Int!){
+    updateActionById(input: {actionPatch: {done: true}, id: $id}){
+      action {
+        id
+      }
+    }
+  }
+`;
+
 function getStatus(helping, index) {
   try {
     if (!helping[index].staff) {
@@ -27,8 +48,25 @@ function getHelpAtState(a, opts) {
   }
 
 }
-function Request({ name, comment, phone, start, stop, pic, helping, toc, delayed, end_time, start_time }) {
-  const [click, setClick] = useState();
+function Request({ name, comment, phone, start, stop, pic, helping, toc, delayed, end_time, start_time, id }) {
+  const [addAction] = useMutation(ADD_ACTION);
+  const [updateAction] = useMutation(Update_ACTION)
+  const [button, setButton] = useState('Provide Assistance');
+  const [actionId, setActionId] = useState()
+  const [no, setNo] = useState(false)
+  async function handleClick() {
+    if (button === 'Complete') {
+      updateAction({ variables: { id: actionId } })
+      setButton('Add Notes')
+      setNo(true)
+      return
+    }
+    console.log({ variables: { done: false, stage: "1", requestId: id } })
+    const data = await addAction({ variables: { done: false, stage: "1", requestId: id } });
+    setButton('Complete')
+    console.log(data)
+    setActionId(data.data.createAction.action.id)
+  }
   return (
     <article className="bg-white px-3 py-1 rounded-lg shadow flex w-full my-6 justify-between">
       <img src={pic} alt="" className="h-14 w-16 rounded-full object-cover border-white border-width-2 self-center" />
@@ -61,7 +99,7 @@ function Request({ name, comment, phone, start, stop, pic, helping, toc, delayed
         </div>
       </div>
       <div className="container mx-auto r-0 self-center flex flex-row-reverse">
-        {(start === 'Liverpool ST' || stop === 'Liverpool ST') && <button className="rounded bg-gray-800 text-white p-2 max-h-16">Help Now</button>}
+        {(start === 'Liverpool ST' || stop === 'Liverpool ST') && !no && <button onClick={handleClick} className="rounded bg-gray-800 text-white p-2 max-h-16">{button}</button>}
       </div>
     </article >
   )

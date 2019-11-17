@@ -1,15 +1,35 @@
 import React from 'react';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
-
+import { useQuery } from '@apollo/react-hooks';
+import gql from 'graphql-tag';
+const staff = gql`
+query {
+  staffById(id: 1) {
+    name
+    pic
+    phone
+    id
+  }
+}
+`
+function Button() {
+  const { data, loading } = useQuery(staff)
+  if (loading) {
+    return <div className="w-56"></div>;
+  }
+  return (
+    <button className="block text-gray-300 flex justify-around align-middle hover:text-red-100">
+      <img src={data.staffById.pic} alt="" className="h-8 w-8 rounded-full object-cover border-white border-width-2 mx-4" />
+      <span className="px-3 py-1 sm:hidden md:block">{data.staffById.name}</span>
+      <KeyboardArrowDownIcon className="my-1" />
+    </button>
+  )
+}
 function Header() {
   return (
     <header className="flex flex-shrink-0">
       <div className="flex-shrink-0 px-2 py-2 bg-red-900 h-12 sm:w-24 md:w-56">
-        <button className="block text-gray-300 flex justify-around align-middle hover:text-red-100">
-          <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=4&amp;w=144&amp;h=144&amp;q=80" alt="" className="h-8 w-8 rounded-full object-cover border-white border-width-2 mx-4" />
-          <span className="px-3 py-1 sm:hidden md:block">Brenda Smith</span>
-          <KeyboardArrowDownIcon className="my-1" />
-        </button>
+        <Button />
       </div>
       <div className="flex-1 flex justify-end pl-2 pr-6 bg-red-800">
         <nav className="flex">
