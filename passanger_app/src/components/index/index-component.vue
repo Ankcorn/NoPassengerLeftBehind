@@ -171,9 +171,9 @@ export default {
           variables: {
             name: this.request.user.name,
             phone: this.request.user.phone,
-            pic: this.request.user.photo,
-            email:
-              "https://images.unsplash.com/photo-1425321556545-264e4650274c?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=512&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=512"
+            pic:
+              "https://images.unsplash.com/photo-1425321556545-264e4650274c?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=512&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=512",
+            email: this.request.user.email
           }
         })
         .then(e => {
