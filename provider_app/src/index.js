@@ -30,6 +30,7 @@ const link = split(
   // split based on operation type
   ({ query }) => {
     const definition = getMainDefinition(query);
+    console.log(definition)
     return (
       definition.kind === 'OperationDefinition' &&
       definition.operation === 'subscription'
@@ -50,9 +51,7 @@ const client = new ApolloClient({
         );
       if (networkError) console.log(`[Network error]: ${networkError}`);
     }),
-    new HttpLink({
-      uri: "https://no-passenger-left-behind.herokuapp.com/graphql",
-    })
+    link
   ]),
   cache: new InMemoryCache()
 });
