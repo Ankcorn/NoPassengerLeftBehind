@@ -210,7 +210,7 @@ export default {
               id: e.data.createPassenger.passenger.id,
               start: this.request.start,
               stop: this.request.destination,
-              toc: "GREAT WESTERN",
+              toc: "GREATER ANGLIA",
               comment: this.request.help
             }
           });

@@ -91,7 +91,7 @@ function Request({ name, comment, phone, start, stop, pic, helping, toc, delayed
         </div>
       </div>
       <div className="container mx-auto r-0 self-center flex flex-row-reverse">
-        {(start === 'Liverpool ST' || stop === 'Liverpool ST') && !no && <button onClick={handleClick} className="rounded bg-gray-800 text-white p-2 max-h-16">{button}</button>}
+        {(start.toLowerCase() === 'Liverpool ST'.toLowerCase() || stop.toLowerCase() === 'Liverpool ST'.toLowerCase()) && (helping.length === 0 || helping[0].done) && !no && <button onClick={handleClick} className="rounded bg-gray-800 text-white p-2 max-h-16">{button}</button>}
       </div>
     </article >
   )

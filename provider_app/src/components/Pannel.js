@@ -14,7 +14,7 @@ function Pannel() {
         </button>
         <a className="block text-gray-300 w-36 flex justify-between items-center hover:text-red-100 my-4 rounded-lg px-2 py-1 hover:bg-gray-700" href="https://passanger.netlify.com/">
           <AddBoxIcon className="mx-2" />
-          <span className="px-3 py-1 sm:hidden md:block">Create Request</span>
+          <span className="px-3 py-1 sm:hidden md:block">Create</span>
         </a>
         <button className="block text-gray-300 w-36 flex justify-between items-center hover:text-red-100 my-4 rounded-lg px-2 py-1 hover:bg-gray-700">
           <SupervisorAccountIcon className="mx-2" />
@@ -29,10 +29,6 @@ function Pannel() {
           <SettingsApplicationsIcon className="mx-2" />
           <span className="px-3 py-1 sm:hidden md:block">Settings</span>
         </button>
-        <a className="block text-gray-300 w-36 flex justify-between items-center hover:text-red-100 my-4 rounded-lg px-2 py-1 hover:bg-gray-700">
-          <AddBoxIcon className="mx-2" />
-          <span className="px-3 py-1 sm:hidden md:block">Create Request</span>
-        </a>
       </div>
     </div>
   )
