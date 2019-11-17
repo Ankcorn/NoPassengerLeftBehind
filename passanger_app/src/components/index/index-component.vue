@@ -1,12 +1,12 @@
 <template>
   <div class="container inside_main">
     <div class="row text-center">
-      <div class="col">Do you need help?</div>
+      <div class="col">Make an assistance request</div>
     </div>
 
     <form @submit.prevent>
       <div class="form-group">
-        <label for="name" class="col-form-label">Name</label>
+        <label for="name" class="col-form-label">Your Name</label>
         <input
           v-model="request.user.name"
           type="text"
@@ -17,7 +17,7 @@
       </div>
 
       <div class="form-group">
-        <label for="email" class="col-form-label">Email</label>
+        <label for="email" class="col-form-label">Email Address</label>
         <input
           v-model="request.user.email"
           type="email"
@@ -28,18 +28,18 @@
       </div>
 
       <div class="form-group">
-        <label for="phone" class="col-form-label">Phone</label>
+        <label for="phone" class="col-form-label">Phone No</label>
         <input
           v-model="request.user.phone "
           type="number"
           class="form-control"
           id="phone"
-          placeholder="+987654321"
+          placeholder="07987654321"
         />
       </div>
 
       <div class="form-group">
-        <label for="time">Time</label>
+        <label for="time">Jourey Time</label>
         <input
           v-model="request.time"
           type="datetime-local"
@@ -51,7 +51,7 @@
 
       <div class="form-row">
         <div class="form-group col-md-6">
-          <label for="start">Start</label>
+          <label for="start">Departure Station</label>
           <input
             v-model="request.start"
             type="text"
@@ -61,7 +61,7 @@
           />
         </div>
         <div class="form-group col-md-6">
-          <label for="Destination">Destination</label>
+          <label for="Destination">Destination Station</label>
           <input
             v-model="request.destination"
             type="text"
@@ -73,7 +73,7 @@
       </div>
 
       <div class="form-group">
-        <label for="help">What help needed</label>
+        <label for="help">How can we support your journey?</label>
         <textarea v-model="request.help" type="text" class="form-control" id="help" rows="1"></textarea>
       </div>
 
