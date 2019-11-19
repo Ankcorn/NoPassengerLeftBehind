@@ -30,7 +30,8 @@ This is also hooked up to the same event system as the passenger app allowing NR
 
 ## The Tech
 
-The whole system is based on PostgreSQL. This gives us a rock solid base to build apon whilst being extremely performant. It also has an incredibly powerful row level security system. This makes sure our data access rules are implemented at all levels preventing leakage of sensative passenger information. 
+The whole system is based on [PostgreSQL](https://www.postgresql.org/). This gives us a rock solid base to build apon whilst being extremely performant. It also has an incredibly powerful row level security system. This makes sure our data access rules are implemented at all levels preventing leakage of sensative passenger information. 
 
-Because the access controls are implemented at the database level we can automatically build a graphql backend using [postgraphile](https://github.com/graphile/postgraphile). 
-## The Team
+Because the access controls are implemented at the database level we can automatically build a graphql backend using [postgraphile](https://github.com/graphile/postgraphile). GraphQL gives us the agility focus on the user experience of the station staff and passengers, whilst postgraphile helps take the burden out of building a GraphQL api from scratch. 
+
+The event system is built on [Graphile Worker](https://github.com/graphile/worker). It gives us the ability to add events on absolutely any database event.
