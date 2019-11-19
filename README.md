@@ -25,9 +25,12 @@ To do this NPLB
 * Gives staff detailed passenger info to help them provide amazing assistance, such as the passengers location in the station.
 * Collects metrics and centralises the feedback from passengers.
 
-This is also hooked up to the same event system allowing NR systems to recieve a stream of every action that happens in the platform. This data should be used to focus on continually improving the experience for passengers with assistance requirements.
+This is also hooked up to the same event system as the passenger app allowing NR systems to recieve a stream of every action that happens in the platform. This data should be used to focus on continually improving the experience for passengers with assistance requirements.
 
 
 ## The Tech
 
+The whole system is based on PostgreSQL. This gives us a rock solid base to build apon whilst being extremely performant. It also has an incredibly powerful row level security system. This makes sure our data access rules are implemented at all levels preventing leakage of sensative passenger information. 
+
+Because the access controls are implemented at the database level we can automatically build a graphql backend using [postgraphile](https://github.com/graphile/postgraphile). 
 ## The Team
