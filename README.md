@@ -18,12 +18,15 @@ The system to give passengers live notifications is extremely flexible. It's des
 
 Currently people who book assistance have a 90% satisfaction on the rail. We believe this is down to the dedication of the rail staff. We want to give them the tools to focus on their interactions with passengers and this system will take care of orchestrating the wider support experience.
 
-It is driven by a responsive and mobile friendly web dashboard, that helps them see who needs help in the next hour on their train or at their station. Then it allows them to assign themselves to help a passenger sending the passenger a notification when they do.
+To do this NPLB
 
-It also shows them the information about the end to end joinery to help provide a holistic experience and also connect with the passenger better.
+* Shows staff who currently needs help now or in the next hour in a real time dashboard.
+* Shows passengers whole journeys focussing on the handover points to make sure passangers don't slip through the cracks.
+* Gives staff detailed passenger info to help them provide amazing assistance, such as the passengers location in the station.
+* Collects metrics and centralises the feedback from passengers.
 
-To allow staff to use their experience to support people it also allows them to add 'case notes' about the passenger to help the next member of staff provide exemplary levels of support. This is encrypted end to end and only made available to staff if the passenger authorizes it. The passenger will be in complete control of this information, having full visibility to what the staff are saying. This is to ensure that staff are focused on the passenger when leaving notes.
- 
+This is also hooked up to the same event system allowing NR systems to recieve a stream of every action that happens in the platform. This data should be used to focus on continually improving the experience for passengers with assistance requirements.
+
 
 ## The Tech
 
